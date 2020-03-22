@@ -1,42 +1,46 @@
 package general;
 
 import io.appium.java_client.AppiumDriver;
-import screen.*;
+import screens.*;
 
 public class ScreenManager {
-  private static BaseScreenObject currentPage = null;
+  // Variables
   private static AppiumDriver driver;
-  private static BaseScreenObject baseScreen;
-  private static HomeScreenObject homeScreen;
-  private static SearchScreenObject searchScreen;
-  private static SearchResultsScreenObject searchResultsScreen;
-
+  private static BaseScreen currentScreen;
+  private static HomeScreen homeScreen;
+  private static SearchScreen searchScreen;
+  private static SignInScreen signInScreen;
+  private static ProductScreen productScreen;
+  private static SearchResultsScreen searchResultsScreen;
+  private static ProductOptionsScreen productOptionsScreen;
+  // Methods
+  public static void initPages(){
+    homeScreen = new HomeScreen(driver);
+    searchScreen = new SearchScreen(driver);
+    signInScreen = new SignInScreen(driver);
+    productScreen = new ProductScreen(driver);
+    searchResultsScreen = new SearchResultsScreen(driver);
+    productOptionsScreen = new ProductOptionsScreen(driver);
+  }
   public static void setDriver(AppiumDriver driver){
     ScreenManager.driver = driver;
   }
-  public static void setCurrentPage(BaseScreenObject page){
-    currentPage = page;
-    ScreenManager.getCurrentPage().validatePage();
+  public static void setCurrentPage(BaseScreen page){
+    currentScreen = page;
+    ScreenManager.getCurrentScreen().validatePage();
   }
-  public static BaseScreenObject getCurrentPage(){
-    return currentPage;
+  public static BaseScreen getCurrentScreen(){
+    return currentScreen;
   }
-  public static void initPages(){
-    baseScreen = new BaseScreenObject(driver);
-    homeScreen = new HomeScreenObject(driver);
-    searchScreen = new SearchScreenObject(driver);
-    searchResultsScreen = new SearchResultsScreenObject(driver);
-  }
-
   // Screen getters
-  public static BaseScreenObject getBaseScreen(){
-    return baseScreen;
-  }
-  public static HomeScreenObject getHomeScreen(){
+  public static HomeScreen getHomeScreen(){
     return homeScreen;
   }
-  public static SearchScreenObject getSearchScreen(){
+  public static SearchScreen getSearchScreen(){
     return searchScreen;
   }
-  public static SearchResultsScreenObject getSearchResultsScreenObject() { return searchResultsScreen; }
+  public static ProductScreen getProductScreen() { return productScreen; }
+  public static SearchResultsScreen getSearchResultsScreen() { return searchResultsScreen; }
+  public static ProductOptionsScreen getProductOptionsScreen() { return productOptionsScreen; }
+  public static SignInScreen getSignInScreen() { return signInScreen; }
 }
