@@ -7,7 +7,7 @@ Feature: Test Example
       | Save Button   |
       | Sort Button   |
       | Filter Button |
-  @WIPx
+
   Scenario: Buy iPhone 7
     When I click "Search box"
     And  I search for "iPhone 7"
@@ -23,7 +23,6 @@ Feature: Test Example
       | SIGN IN WITH FACEBOOK |
       | CREATE AN ACCOUNT     |
 
-    @WIPx
   Scenario: Add iPhone to cart
     When I click "Search box"
     And  I search for "iPhone 7"

@@ -43,7 +43,7 @@ public class BaseScreen {
   }
   public void validateData(String scope, DataTable dataTable) {
     List<Map<String,String>> data = dataTable.asMaps();
-    info("Validating '" + scope + "' with data: " + data);
+    info("Validating " + scope + " with data: " + data);
     assertThat(validator("validate" + capitalize(scope), data)).isTrue();
   }
   public void validateFields(DataTable dataTable) {
@@ -66,11 +66,11 @@ public class BaseScreen {
   // Overridable methods
   public void navigate(String element){}
   public void searchFor(String string) {
-    throw new Error("'searchFor' is undefined for " + this.getClass());
+    throw new Error("searchFor is undefined for " + this.getClass());
   }
   public void callMethod(String method, List<Map<String,String>> data){
     switch (method){
-      default: throw new Error("Given method '" + method + "' is undefined");
+      default: throw new Error("Given method " + method + " is undefined");
     }
   }
   public AppiumElement getMainElement(){

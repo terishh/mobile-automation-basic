@@ -2,7 +2,6 @@ package general;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 public class Logger {
   // Variables

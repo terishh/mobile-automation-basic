@@ -26,16 +26,16 @@ public class AppiumElement {
   // Methods
   public void click() {
     find(TIMEOUT).click();
-    info("________Clicked: " + key);
+    info("Clicked: " + key);
   }
   public void scrollIntoView() {
-    info("___Scrolling to: " + key);
+    info("Scrolling to: " + key);
     Dimension size = driver.manage().window().getSize();
     int anchor = (int) (size.width / 2);
 
     for (int i = 0; i < TIMEOUT; i++) {
       if(isDisplayed(1)){
-        info("____Scrolled to: " + key);
+        info("Scrolled to: " + key);
         break;
       }
       new TouchAction(driver)
@@ -44,21 +44,21 @@ public class AppiumElement {
               .release()
               .perform();
     }
-    info("_Done Scrolling");
+    info("Done Scrolling");
   }
   public Boolean isDisplayed(Integer timeout){
     try {
       find(timeout);
-      info("__________Found: " + key);
+      info("Found: " + key);
       return true;
     }catch (org.openqa.selenium.NoSuchElementException e){
-      info("___Did not find: " + key);
+      info("Did not find: " + key);
       return false;
     }
   }
   public AndroidElement find(Integer timeout){
     driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
-    info("________Finding: " + key);
+    info("Finding: " + key);
     return (AndroidElement) driver.findElement(by, using);
   }
 }
