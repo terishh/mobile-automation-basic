@@ -1,4 +1,4 @@
-Feature: Test Example
+Feature: Basic Actions
 
   Scenario: Search for iPhone 7
     When I click "Search box"
