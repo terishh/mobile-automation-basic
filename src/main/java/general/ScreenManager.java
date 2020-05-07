@@ -24,6 +24,7 @@ public class ScreenManager {
   }
   public static void setDriver(AppiumDriver driver){
     ScreenManager.driver = driver;
+    initPages();
   }
   public static void setCurrentPage(BaseScreen page){
     currentScreen = page;
