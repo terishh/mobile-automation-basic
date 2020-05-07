@@ -39,11 +39,11 @@ public class Hooks {
   }
 
   private void startDriver() throws MalformedURLException {
-  setCapabilities();
-  driver = new AppiumDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
-  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-  ScreenManager.setDriver(driver);
-  ScreenManager.setCurrentPage(getHomeScreen());
+    setCapabilities();
+    driver = new AppiumDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    ScreenManager.setDriver(driver);
+    ScreenManager.setCurrentPage(getHomeScreen());
   }
 
   private void startAppium(){
