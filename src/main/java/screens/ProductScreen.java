@@ -45,7 +45,9 @@ public class ProductScreen extends HomeScreen {
     {
       String key = itr.next();
       String value = map.get(key);
-      getElement(capitalizeSecond(key)).click();
+      String el = capitalizeSecond(key);
+      getElement(el).isDisplayed(getTimeout());
+      getElement(el).click();
       getElement("optionsList").find(5).findElement("xpath", "//*[@text='" + value + "']").click();
     }
   }
