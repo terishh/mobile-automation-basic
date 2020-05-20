@@ -64,7 +64,7 @@ Feature: Basic Actions
       | Decorative Arts        |
 
   @WIP @NEW_FEATURE
-  Scenario: Check categories - Antiques
+  Scenario: Check categories - Antiques - Ethnographics
     When I click "Stack button"
     And  I click "Categories"
     And  I click "Antiques"
@@ -74,3 +74,14 @@ Feature: Basic Actions
       | Latin American            |
       | Native American           |
       | Pacific Islands & Oceania |
+
+  @WIP @NEW_FEATURE
+  Scenario: Validate - Create a business account screen
+    When I click "Register"
+    And  I click "Create a business account"
+    Then I see the following fields:
+      | Legal business name  |
+      | Legal business email |
+      | Reenter email        |
+      | Password             |
+      | Legal business phone |
