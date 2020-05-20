@@ -8,6 +8,7 @@ Feature: Basic Actions
       | Sort Button   |
       | Filter Button |
 
+  @WIP
   Scenario: Buy iPhone 7
     When I click "Search box"
     And  I search for "Apple iPhone 7 32GB 128GB 256GB UNLOCKED SMARTPHONE GSM ALL COLORS"
@@ -22,7 +23,8 @@ Feature: Basic Actions
       | SIGN IN WITH GOOGLE   |
       | SIGN IN WITH FACEBOOK |
       | CREATE AN ACCOUNT     |
-
+  
+  @WIP
   Scenario: Add iPhone to cart
     When I click "Search box"
     And  I search for "Apple iPhone 7 32GB 128GB 256GB UNLOCKED SMARTPHONE GSM ALL COLORS"
@@ -39,3 +41,36 @@ Feature: Basic Actions
       | SIGN IN WITH GOOGLE   |
       | SIGN IN WITH FACEBOOK |
       | CREATE AN ACCOUNT     |
+  
+  @WIP @NEW_FEATURE
+  Scenario: Check categories
+    When I click "Stack button"
+    And  I click "Categories"
+    Then I see the following fields:
+      | Antiques |
+      | Art      |
+      | Baby     |
+      | Books    |
+
+  @WIP @NEW_FEATURE
+  Scenario: Check categories - Antiques
+    When I click "Stack button"
+    And  I click "Categories"
+    And  I click "Antiques"
+    Then I see the following fields:
+      | Antiquities            |
+      | Architectural & Garden |
+      | Asian Antiques         |
+      | Decorative Arts        |
+
+  @WIP @NEW_FEATURE
+  Scenario: Check categories - Antiques
+    When I click "Stack button"
+    And  I click "Categories"
+    And  I click "Antiques"
+    And  I click "Ethnographic"
+    Then I see the following fields:
+      | African                   |
+      | Latin American            |
+      | Native American           |
+      | Pacific Islands & Oceania |
