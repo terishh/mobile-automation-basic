@@ -1,5 +1,6 @@
 Feature: Basic Actions
 
+  @WIP
   Scenario: Search for iPhone 7
     When I click "Search box"
     And  I search for "iPhone 7"
@@ -13,6 +14,7 @@ Feature: Basic Actions
     When I click "Search box"
     And  I search for "Apple iPhone 7 32GB 128GB 256GB UNLOCKED SMARTPHONE GSM ALL COLORS"
     And  I click "First Search Result"
+    And  I scroll to "BUY IT NOW"
     And  I "select options" with following data:
       | Storage Capacity Selector | Color Selector |
       | 128GB                     | Gold           |
