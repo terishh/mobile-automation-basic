@@ -1,6 +1,5 @@
 Feature: Basic Actions
 
-  @WIP
   Scenario: Search for iPhone 7
     When I click "Search box"
     And  I search for "iPhone 7"
