@@ -77,7 +77,7 @@ Feature: Basic Actions
       | Native American           |
       | Pacific Islands & Oceania |
 
-  @WIPx @NEW_FEATURE
+  @WIP @NEW_FEATURE
   Scenario: Validate - Create a business account screen
     When I click "Register"
     And  I click "Create a business account"
