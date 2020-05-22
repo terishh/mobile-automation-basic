@@ -11,6 +11,10 @@ public class HomeScreen extends BaseScreen {
     addElement("ebayLogo", "id", "logo");
     addElement("searchBox", "id", "search_box");
     addElement("progressBar", "id", "translucent_progress_bar");
+    addElement("stackButton", "id", "home");
+    addElement("categories", "id", "menuitem_categories");
+    addElement("categories", "id", "menuitem_categories");
+    addElement("register", "id", "button_register");
   }
   // Base Methods
   @Override
@@ -20,8 +24,10 @@ public class HomeScreen extends BaseScreen {
   @Override
   public void navigate(String element){
     switch (element){
-      case "searchBox": ScreenManager.setCurrentPage(ScreenManager.getSearchScreen());break;
-      default         : super.navigate(element);
+      case "searchBox" : ScreenManager.setCurrentPage(ScreenManager.getSearchScreen());break;
+      case "categories": ScreenManager.setCurrentPage(ScreenManager.getCategoriesScreen()); break;
+      case "register"  : ScreenManager.setCurrentPage(ScreenManager.getCreateAnAccountScreen()); break;
+      default          : super.navigate(element);
     }
   }
 }

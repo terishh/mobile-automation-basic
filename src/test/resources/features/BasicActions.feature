@@ -1,5 +1,6 @@
 Feature: Basic Actions
 
+  @WIP
   Scenario: Search for iPhone 7
     When I click "Search box"
     And  I search for "iPhone 7"
@@ -76,7 +77,7 @@ Feature: Basic Actions
       | Native American           |
       | Pacific Islands & Oceania |
 
-  @WIP @NEW_FEATURE
+  @WIPx @NEW_FEATURE
   Scenario: Validate - Create a business account screen
     When I click "Register"
     And  I click "Create a business account"
