@@ -25,7 +25,7 @@ Feature: Basic Actions
       | SIGN IN WITH GOOGLE   |
       | SIGN IN WITH FACEBOOK |
       | CREATE AN ACCOUNT     |
-  
+
   @WIP
   Scenario: Add iPhone to cart
     When I click "Search box"
@@ -43,8 +43,8 @@ Feature: Basic Actions
       | SIGN IN WITH GOOGLE   |
       | SIGN IN WITH FACEBOOK |
       | CREATE AN ACCOUNT     |
-  
-  @WIP @NEW_FEATURE
+
+  @WIP
   Scenario: Check categories
     When I click "Stack button"
     And  I click "Categories"
@@ -54,7 +54,7 @@ Feature: Basic Actions
       | Baby     |
       | Books    |
 
-  @WIP @NEW_FEATURE
+  @WIP
   Scenario: Check categories - Antiques
     When I click "Stack button"
     And  I click "Categories"
@@ -65,7 +65,7 @@ Feature: Basic Actions
       | Asian Antiques         |
       | Decorative Arts        |
 
-  @WIP @NEW_FEATURE
+  @WIP
   Scenario: Check categories - Antiques - Ethnographics
     When I click "Stack button"
     And  I click "Categories"
@@ -77,7 +77,7 @@ Feature: Basic Actions
       | Native American           |
       | Pacific Islands & Oceania |
 
-  @WIP @NEW_FEATURE
+  @WIP
   Scenario: Validate - Create a business account screen
     When I click "Register"
     And  I click "Create a business account"
@@ -87,3 +87,41 @@ Feature: Basic Actions
       | Reenter email        |
       | Password             |
       | Legal business phone |
+
+  @WIP @HOMEWORK @IMPLEMENT_THIS
+  Scenario: Check categories - Cameras & Photo
+    When I click "Stack button" 
+    And  I click "Categories"
+    And  I click "Cameras & Photo"
+    Then I see the following fields:
+      | Camcorders       |
+      | Camera Drones    |
+      | Digital Cameras  |
+      | Film Photography |
+
+  @WIP @HOMEWORK @IMPLEMENT_THIS
+  Scenario: Check available options for Nikon
+    When I click "Stack button" 
+    And  I click "Categories"
+    And  I click "Cameras & Photo"
+    And  I click "Digital Cameras"
+    And  I click "Nikon"
+    And  I click "Nikon D"
+    And  I click "Nikon D5600"
+    Then I see the following fields:
+      | Limited Time Deals |
+      | Hot This Week      |
+
+  @WIP @HOMEWORK @IMPLEMENT_THIS
+  Scenario: Check languages
+    When I click "Stack button"
+    And  I scroll to "Settings"
+    And  I click "Settings"
+    And  I click "Country or region"
+    And  I click "Switch widget"
+    When I click "United States"
+    And  I search for "Sw"
+    Then I see the following fields:
+      | Swaziland   |
+      | Sweden      |
+      | Switzerland |

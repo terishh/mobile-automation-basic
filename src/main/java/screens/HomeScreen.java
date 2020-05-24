@@ -13,7 +13,6 @@ public class HomeScreen extends BaseScreen {
     addElement("progressBar", "id", "translucent_progress_bar");
     addElement("stackButton", "id", "home");
     addElement("categories", "id", "menuitem_categories");
-    addElement("categories", "id", "menuitem_categories");
     addElement("register", "id", "button_register");
   }
   // Base Methods
