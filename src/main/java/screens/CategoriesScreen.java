@@ -13,6 +13,9 @@ public class CategoriesScreen extends BaseScreen {
     addElement("art", "xpath", "//*[@text='Art']");
     addElement("baby", "xpath", "//*[@text='Baby']");
     addElement("books", "xpath", "//*[@text='Books']");
+
+    addElement("camerasPhoto", "xpath", "//*[@text='Cameras & Photo']");
+
     addElement("antiquities", "xpath", "//*[@text='Antiquities']");
     addElement("architecturalGarden", "xpath", "//*[@text='Architectural & Garden']");
     addElement("asianAntiques", "xpath", "//*[@text='Asian Antiques']");
@@ -22,6 +25,19 @@ public class CategoriesScreen extends BaseScreen {
     addElement("latinAmerican", "xpath", "//*[@text='Latin American']");
     addElement("nativeAmerican", "xpath", "//*[@text='Native American']");
     addElement("pacificIslandsOceania", "xpath", "//*[@text='Pacific Islands & Oceania']");
+
+    addElement("camcorders", "xpath", "//*[@text='Camcorders']");
+    addElement("cameraDrones", "xpath", "//*[@text='Camera Drones']");
+    addElement("digitalCameras", "xpath", "//*[@text='Digital Cameras']");
+    addElement("filmPhotography", "xpath", "//*[@text='Film Photography']");
+
+    addElement("nikon", "xpath", "//*[@text='Nikon']");
+    addElement("nikonD", "xpath", "//*[@text='Nikon D']");
+    addElement("nikonD5600", "xpath", "//*[@text='Nikon D5600']");
+
+    addElement("hotThisWeek", "xpath", "//*[@text='Hot This Week']");
+    addElement("authorizedSeller", "xpath", "//*[@text='Authorized Seller']");
+
   }
   // Base Methods
   @Override
