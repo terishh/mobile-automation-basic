@@ -14,6 +14,7 @@ public class HomeScreen extends BaseScreen {
     addElement("stackButton", "id", "home");
     addElement("categories", "id", "menuitem_categories");
     addElement("register", "id", "button_register");
+    addElement("settings", "id", "menuitem_settings");
   }
   // Base Methods
   @Override
@@ -26,6 +27,7 @@ public class HomeScreen extends BaseScreen {
       case "searchBox" : ScreenManager.setCurrentPage(ScreenManager.getSearchScreen());break;
       case "categories": ScreenManager.setCurrentPage(ScreenManager.getCategoriesScreen()); break;
       case "register"  : ScreenManager.setCurrentPage(ScreenManager.getCreateAnAccountScreen()); break;
+      case "settings"  : ScreenManager.setCurrentPage(ScreenManager.getSettingsScreen()); break;
       default          : super.navigate(element);
     }
   }
