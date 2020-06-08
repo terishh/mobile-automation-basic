@@ -9,7 +9,7 @@ Feature: Basic Actions
       | Sort Button   |
       | Filter Button |
 
-  @WIP
+ @WIP
   Scenario: Buy iPhone 7
     When I click "Search box"
     And  I search for "Apple iPhone 7 32GB 128GB 256GB UNLOCKED SMARTPHONE GSM ALL COLORS"
@@ -88,7 +88,7 @@ Feature: Basic Actions
       | Password             |
       | Legal business phone |
 
-  @WIP @HOMEWORK @IMPLEMENT_THIS
+  @WIP @HOMEWORK
   Scenario: Check categories - Cameras & Photo
     When I click "Stack button" 
     And  I click "Categories"
@@ -99,7 +99,7 @@ Feature: Basic Actions
       | Digital Cameras  |
       | Film Photography |
 
-  @WIP @HOMEWORK @IMPLEMENT_THIS
+  @WIP @HOMEWORK
   Scenario: Check available options for Nikon
     When I click "Stack button" 
     And  I click "Categories"
@@ -109,10 +109,10 @@ Feature: Basic Actions
     And  I click "Nikon D"
     And  I click "Nikon D5600"
     Then I see the following fields:
-      | Limited Time Deals |
-      | Hot This Week      |
+      | Hot This Week     |
+      | Authorized Seller |
 
-  @WIP @HOMEWORK @IMPLEMENT_THIS
+  @WIP @HOMEWORK
   Scenario: Check languages
     When I click "Stack button"
     And  I scroll to "Settings"
