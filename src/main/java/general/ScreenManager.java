@@ -16,6 +16,7 @@ public class ScreenManager {
   private static CategoriesScreen categoriesScreen;
   private static CreateAnAccountScreen createAnAccountScreen;
   private static RegisterScreen registerScreen;
+  private static SettingsScreen settingsScreen;
   // Methods
   public static void initPages(){
     homeScreen = new HomeScreen(driver);
@@ -27,6 +28,7 @@ public class ScreenManager {
     categoriesScreen = new CategoriesScreen(driver);
     createAnAccountScreen = new CreateAnAccountScreen(driver);
     registerScreen = new RegisterScreen(driver);
+    settingsScreen = new SettingsScreen(driver);
   }
   public static void setDriver(AppiumDriver driver){
     ScreenManager.driver = driver;
@@ -53,4 +55,6 @@ public class ScreenManager {
   public static CategoriesScreen getCategoriesScreen() { return categoriesScreen; }
   public static CreateAnAccountScreen getCreateAnAccountScreen() { return createAnAccountScreen; }
   public static RegisterScreen getRegisterScreen() { return registerScreen; }
+  public static SettingsScreen getSettingsScreen() { return settingsScreen; }
 }
+
